@@ -3,8 +3,8 @@ package btcaddress
 import(
 	"crypto/rand"
 	"crypto/ecdsa"
-	"crypto/sha256"
-	"golang.org/x/crypto/ripemd160"
+	// "crypto/sha256"
+	// "golang.org/x/crypto/ripemd160"
 
 	"github.com/btcsuite/btcd/btcec"
 )
@@ -14,6 +14,6 @@ func GenerateKeyPair() (*ecdsa.PrivateKey, ) {
 	return key
 }
 
-func GenerateAddress(keyPair ecdsa.PrivateKey) string {
-	hash1 := sha256.Sum256([]byte(keyPair.PublicKey.)) // memo: read bitcoinjs-lib
-}
+// func GenerateAddress(keyPair ecdsa.PrivateKey) string {
+// 	hash1 := sha256.Sum256([]byte(keyPair.PublicKey)
+// }
