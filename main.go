@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"./btcaddress"
+	"github.com/johnta0/btcaddress-go"
 )
 
 func main() {
