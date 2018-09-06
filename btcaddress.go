@@ -14,9 +14,10 @@ import(
 )
 
 // GenerateKeyPair returns (private key public key) key pair
-func GenerateKeyPair() (*ecdsa.PrivateKey, ) {
-	key, _ := ecdsa.GenerateKey(btcec.S256(), rand.Reader)
-	return key
+func GenerateKeyPair() (*ecdsa.PrivateKey, error ) {
+	key, err := ecdsa.GenerateKey(btcec.S256(), rand.Reader)
+	if err != nil { return nil, err } 
+	return key, nil
 }
 
 // ToScalar returns compressed pubkey generated from EC point public key
