@@ -21,8 +21,8 @@ func GenerateKeyPair() (*ecdsa.PrivateKey, error ) {
 }
 
 // ToScalar returns compressed pubkey generated from EC point public key
-func ToScalar(keyPair ecdsa.PrivateKey) string {
-	pubkeyX := fmt.Sprintf("%x", keyPair.PublicKey.X)
+func ToScalar(pubkey ecdsa.PublicKey) string {
+	pubkeyX := fmt.Sprintf("%x", pubkey.X)
 	// pubkeyY := fmt.Sprintf("%x", keyPair.PublicKey.Y)
 	// if pubkeyY is even => prefix is 02
 	// if pubkeyY is odd => prefix is 03
